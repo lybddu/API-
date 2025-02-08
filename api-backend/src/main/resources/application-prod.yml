@@ -1,0 +1,33 @@
+spring:
+  # DataSource Config
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: 'jdbc:mysql://49.235.155.82:3306/api_project?useSSL=false'
+    username: apilyb
+    password: lyb12345678
+    # session 失效时间
+  session:
+    timeout: 86400
+  application:
+    name: api-backend
+
+# 线上配置文件
+server:
+  port: 8102
+  servlet:
+    session:
+      cookie:
+        domain: api.llyb.fun # 配置cookie的作用域，填的是你的服务器IP
+
+dubbo:
+  application:
+    # 设置应用的名称
+    name: dubbo-springboot-demo-provider
+  # 指定使用 Dubbo 协议，且端口设置为 -1，表示随机分配可用端口
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    # 配置注册中心为 Nacos，使用的地址是 nacos://localhost:8848
+    id: nacos-registry
+    address: nacos://localhost:8848
