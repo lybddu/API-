@@ -2,9 +2,9 @@ spring:
   # DataSource Config
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: 'jdbc:mysql://49.235.155.82:3306/api_project?useSSL=false'
-    username: apilyb
-    password: lyb12345678
+    url: 
+    username: 
+    password: 
     # session 失效时间
   session:
     timeout: 86400
